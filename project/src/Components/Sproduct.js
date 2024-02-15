@@ -18,7 +18,7 @@ function Sproduct(props) {
             <div className='container row mx-auto mt-5'>
                 {
 
-                    props.datasrc.filter(bestpro => bestpro.quantity > 88).slice(0, 4).map((e, i) => {
+props.datasrc &&   props.datasrc.filter(bestpro => bestpro.quantity > 88).slice(0, 4).map((e, i) => {
                         return (
                             <div key={i} className='col-lg-3 col-md-6 mb-5 pb-4 text-center'>
                                 <Link className='d-block'>

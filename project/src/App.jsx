@@ -91,7 +91,7 @@ function App() {
 
   return (
     <>
-      {/* <Header datasrc={totalpro && totalpro['Category'] && totalpro['Category']}></Header>
+      <Header datasrc={totalpro && totalpro['Category'] && totalpro['Category']}></Header>
       <Routes>
         <Route path="/" element={<section className='mainsec'>
           <Mainswiper></Mainswiper>
@@ -113,7 +113,7 @@ function App() {
         <Route path='/store/:Category_no' element={<Store datasrc={totalpro && totalpro['Scinic_Product'] && totalpro['Scinic_Product']} catesrc={totalpro && totalpro['Category'] && totalpro['Category']} />}></Route>
 
       </Routes>
-      <Footer></Footer> */}
+      <Footer></Footer>
 
 
     </>

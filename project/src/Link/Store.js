@@ -22,7 +22,7 @@ function Store(props) {
                 <div className='mb-5 border-bottom'>
                     <h2>{Category_no !== "all" ? props.catesrc.filter((el) => el.Category_no == Category_no)[0].Cate_title : "전체상품"}</h2>
                 </div>
-                {Category_no !== "all" ? props.datasrc.filter((element) => element.Category_no == Category_no).map((e, i) => (
+                {props.datasrc && Category_no !== "all" ? props.datasrc.filter((element) => element.Category_no == Category_no).map((e, i) => (
                     <div className='col-lg-3 col-md-6 mb-5 pb-4 text-center' key={i}>
                         <img src={e.img} className='img-fluid' alt={`product${i}`} />
                         <strong>{e.title}</strong>
@@ -34,7 +34,7 @@ function Store(props) {
                     </div>
                 ))
                     :
-                    props.datasrc.map((e, i) => (
+                    props.datasrc &&  props.datasrc.map((e, i) => (
                         <div className='col-lg-3 col-md-6 mb-5 pb-4 text-center' key={i}>
                             <img src={e.img} className='img-fluid' alt={`product${i}`} />
                             <strong>{e.title}</strong>

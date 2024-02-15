@@ -19,19 +19,20 @@ function Header(props) {
         Gnbmenu.current.classList.toggle("d-none")
     }
 
-    // const [menu, menuClick] = useState(false);
-
-    // const togglemenu = () => {
-    //     menuClick((prevmenu) => !prevmenu);
-    // }
     const scrolldown = () => {
         document.querySelector("#hd").classList = window.scrollY > 0 ? "fixed-top bg-white border-bottom down" : "fixed-top bg-white border-bottom";
         document.body.classList = window.scrollY > 0 ? "down" : "";
-
-
-
     }
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto'
+        });
+    };
+
     useEffect(() => {
+        console.log(props)
 
 
         window.addEventListener("scroll", scrolldown)
@@ -40,12 +41,7 @@ function Header(props) {
         }
 
     }, [])
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'auto'
-        });
-    };
+
 
 
 
@@ -69,7 +65,7 @@ function Header(props) {
                                     <ul className='d2li'>
                                         <li><Link to="/store/all">전체상품</Link></li>
                                         {
-                                            props.datasrc.map((e, i) => {
+                                       props.datasrc  &&     props.datasrc.map((e, i) => {
                                                 return <li key={i}><Link to={`/store/${e.Category_no}`}>{e.Cate_title}</Link></li>
                                             })
                                         }
