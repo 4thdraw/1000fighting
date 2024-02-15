@@ -1,0 +1,331 @@
+li {
+    list-style: none;
+}
+
+
+
+#Logo {
+    margin-top: 60px;
+
+    img {
+
+        width: 128px;
+        height: 24px;
+
+
+
+    }
+}
+
+
+
+
+#Gnb {
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+#Product img,
+#best img {
+    width: 300px;
+    margin-bottom: 3rem;
+
+
+
+}
+
+
+
+#best h2 {
+    margin-bottom: 50px;
+}
+
+#Product span,
+#best span {
+    font-weight: 800;
+}
+
+
+#Product ul li {
+    font-family: 'Noto Sans KR Variable', sans-serif !important;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 30px;
+    line-height: 50px;
+    width: 80px;
+
+}
+
+#Product ul li.on {
+    background-color: salmon;
+}
+
+.fadeInDown {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.fadeInLeft {
+    margin-right: 10px;
+
+    img {
+        width: 950px;
+    }
+
+}
+
+.fadeInRight {
+    margin-left: 10px;
+
+    img {
+        width: 950px;
+    }
+}
+
+#main_promo {
+    display: flex;
+
+}
+
+
+
+#hd .fixed-right {
+    position: fixed;
+    opacity: 0;
+    right: 30px;
+    bottom: 45%;
+    z-index: 9999;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px 12px;
+    background-color: #fff;
+    border-radius: 40px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+#hd.down .fixed-right {
+    opacity: 1;
+}
+
+
+
+#hd .recenttext {
+    visibility: hidden;
+    width: 87px;
+    background-color: rgba(115, 115, 115, 0.9);
+    ;
+}
+
+#hd #gnb {
+    flex-wrap: wrap;
+}
+
+#hd.down #gnb {
+    display: flex;
+
+    align-items: center;
+
+
+
+    #Logo {
+        width: auto;
+        margin: 0;
+        margin-top: 0;
+        height: auto;
+        margin-bottom: 18px;
+    }
+
+    #Gnb {
+        padding: 0 0;
+        flex-wrap: nowrap !important;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #Login {
+        position: unset !important;
+        margin-top: 50px;
+        margin: 0;
+        height: auto;
+
+
+    }
+}
+
+
+
+
+
+///////////////REVIEW/////////////////
+
+
+ul.award {
+    max-width: 1400px;
+    margin: 70px auto 0;
+    padding: 0;
+}
+
+.footer,
+.footer_menu a,
+.footer_box p {
+    color: #666;
+}
+
+.footer h2 {
+    color: black !important;
+}
+
+.footer_icon {
+
+
+    img {
+        width: 30px !important;
+        margin-left: 10px
+    }
+}
+
+.footer_menu a {
+    margin-left: 20px;
+    font-size: 16px;
+
+}
+
+.footer_menu a:nth-child(even) {
+    font-size: 19px;
+}
+
+#Mainswiper {
+    margin-top: 70px;
+
+    .swipermobile {
+        // width: 100vw !important;
+        height: 980px !important;
+    }
+}
+
+#Mainswiper .swiper-pagination {
+    height: 80px;
+
+}
+
+#Mainswiper .swiper-pagination-bullet-active {
+    background-color: white !important;
+
+}
+
+#Mainswiper .swiper-button-prev,
+#Mainswiper .swiper-button-next {
+    top: 60%;
+    color: #ccc;
+}
+
+// 유튜브
+#player {
+    width: 100%;
+    height: 30vw;
+}
+
+//Form
+// .login-wrapper {
+//     width: 400px;
+//     height: 350px;
+//     padding: 40px;
+//     box-sizing: border-box;
+// }
+
+// .login-wrapper>h2 {
+//     font-size: 24px;
+//     color: #6A24FE;
+//     margin-bottom: 20px;
+// }
+
+// #login-form>input {
+//     width: 100%;
+//     height: 48px;
+//     padding: 0 10px;
+//     box-sizing: border-box;
+//     margin-bottom: 16px;
+//     border-radius: 6px;
+//     background-color: #F8F8F8;
+// }
+
+// #login-form>input::placeholder {
+//     color: #D2D2D2;
+// }
+
+// #login-form>input[type="submit"] {
+//     color: #fff;
+//     font-size: 16px;
+//     background-color: #6A24FE;
+//     margin-top: 20px;
+// }
+
+// #login-form>input[type="checkbox"] {
+//     display: none;
+// }
+
+// #login-form>label {
+//     color: #999999;
+// }
+
+// #login-form input[type="checkbox"]+label {
+//     cursor: pointer;
+//     padding-left: 26px;
+//     background-image: url("checkbox.png");
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// }
+
+// #login-form input[type="checkbox"]:checked+label {
+//     background-image: url("checkbox-active.png");
+//     background-repeat: no-repeat;
+//     background-size: contain;
+// }
+
+
+//세부페이지
+
+.brandstory {
+    img {
+
+        margin-bottom: 150px;
+    }
+
+    strong {
+        display: inline-block;
+        font-size: 1.5rem;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        margin-top: 5rem;
+    }
+
+    :last-child {
+        margin-top: 0 !important;
+    }
+
+    p {
+        font-size: 1.1rem;
+
+    }
+}
+
+
+
+
+////////////////////////////미디어쿼리 반응형////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////

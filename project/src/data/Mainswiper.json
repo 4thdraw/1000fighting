@@ -1,0 +1,44 @@
+{
+    "mainbanner": [
+        {
+            "pcimgslide": "main01.jpg",
+            "mimgslide": "mobile01.jpg",
+            "alt": "slide1"
+        },
+        {
+            "pcimgslide": "main02.jpg",
+            "mimgslide": "mobile02.jpg",
+            "alt": "slide2"
+        },
+        {
+            "pcimgslide": "main03.jpg",
+            "mimgslide": "mobile03.jpg",
+            "alt": "slide3"
+        },
+        {
+            "pcimgslide": "main04.jpg",
+            "mimgslide": "mobile04.jpg",
+            "alt": "slide4"
+        },
+        {
+            "pcimgslide": "main05.jpg",
+            "mimgslide": "mobile05.jpg",
+            "alt": "slide5"
+        },
+        {
+            "pcimgslide": "main06.jpg",
+            "mimgslide": "mobile06.jpg",
+            "alt": "slide6"
+        },
+        {
+            "pcimgslide": "main07.jpg",
+            "mimgslide": "mobile07.jpg",
+            "alt": "slide7"
+        },
+        {
+            "pcimgslide": "main08.jpg",
+            "mimgslide": "mobile08.jpg",
+            "alt": "slide8"
+        }
+    ]
+}

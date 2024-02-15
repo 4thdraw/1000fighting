@@ -1,0 +1,36 @@
+{
+    "review": [
+        {
+            "reviewimg": "review1.jpg",
+            "alt": "리뷰1",
+            "ptitle": "Test",
+            "ptext": "내용Test",
+            "wr_id": "scinic",
+            "star": 5
+        },
+        {
+            "reviewimg": "review1.jpg",
+            "alt": "리뷰2",
+            "ptitle": "Test",
+            "ptext": "내용Test",
+            "wr_id": "scinic",
+            "star": 2
+        },
+        {
+            "reviewimg": "review1.jpg",
+            "alt": "리뷰3",
+            "ptitle": "Test",
+            "ptext": "내용Test",
+            "wr_id": "scinic",
+            "star": 3
+        },
+        {
+            "reviewimg": "review1.jpg",
+            "alt": "리뷰4",
+            "ptitle": "Test",
+            "ptext": "내용Test",
+            "wr_id": "scinic",
+            "star": 4
+        }
+    ]
+}
