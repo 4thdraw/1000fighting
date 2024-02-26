@@ -66,7 +66,7 @@ function Header(props) {
                                         <li><Link to="/store/all">전체상품</Link></li>
                                         {
                                        props.datasrc  &&     props.datasrc.map((e, i) => {
-                                                return <li key={i}><Link to={`/store/${e.Category_no}`}>{e.Cate_title}</Link></li>
+                                                return <li key={i}><Link to={`/store/${e.id}`}>{e.Cate_title}</Link></li>
                                             })
                                         }
                                     </ul>
