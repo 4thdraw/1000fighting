@@ -27,71 +27,42 @@ import award from "./data/award.json"
 
 
 function App() {
-  const [totalpro, settotal] = useState([]);
-  const [catepro, setcate] = useState([]);
 
-
+  const [totalpro, settotal] = useState(null);
+  
   useEffect(() => {
-    const dbstore = async (r, t, cate = "all") => {
-      try {
-        if (cate !== "all") {
-          const result = await axios.get(`/${r}/${t}/${cate}`, {
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            params: {
-              param: "아무거나"
-            }
-          });
-          settotal([...result.data])
-        } else {
-          const result = await axios.get(`/${r}/${t}`, {
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            params: {
-              param: "아무거나"
-            }
-          });
-          settotal([...result.data])
-        }
+    //get
+    const dbstore = async (rtc) => {
+      const [r, t, cate = 'all'] = rtc.split("/");
 
-
-        ;
+      try {    
+          const result = await axios.get(`/${rtc}`);
+          settotal((prestate)=>({
+            ...prestate,
+            [t]:[...result.data]
+          }));          
+          console.log(totalpro)
       } catch (error) {
         console.log(error);
       }
     };
-
-    const category_no = async () => {
-      try {
-
-        const catename = await axios.get('/store/Category', {
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          params: {
-            param: "아무거나"
-          }
-        });
-        setcate([...catename.data])
-
-
-
-          ;
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    dbstore("store", "Scinic_Product");
-    category_no();
+    
+    dbstore("/store/Scinic_Product");
+    dbstore("/store/Category"); 
     console.log();
   }, []);
+
+  useEffect(() => {
+    console.log(totalpro)
+
+  },[totalpro])
+
+
 
 
   return (
     <>
-      <Header datasrc={catepro && catepro}></Header>
+      {/* <Header datasrc={totalpro && totalpro['Category'] &&  totalpro['Category']}></Header>
       <Routes>
         <Route path="/" element={<section className='mainsec'>
           <Mainswiper datasrc={Mainswipe.mainbanner}></Mainswiper>
@@ -102,7 +73,7 @@ function App() {
             <Scrollimg2></Scrollimg2>
           </div>
           <Youtubev></Youtubev>
-          <Product datasrc={totalpro && totalpro} catesrc={catepro && catepro}></Product>
+          <Product datasrc={totalpro && totalpro} catesrc={totalpro && totalpro['Category'] &&  totalpro['Category']}></Product>
           <Mbenefit></Mbenefit>
           <Reviews datasrc={review.review}></Reviews>
           <Awards datasrc={award.award}></Awards>
@@ -110,10 +81,10 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/brand" element={<Brandstory />}></Route>
         <Route path='/promotion' element={<Promotion />}></Route>
-        <Route path='/store/:Category_no' element={<Store datasrc={totalpro && totalpro} catesrc={catepro && catepro} />}></Route>
+        <Route path='/store/:Category_no' element={<Store datasrc={totalpro && totalpro} catesrc={totalpro && totalpro['Category'] &&  totalpro['Category']} />}></Route>
 
       </Routes>
-      <Footer></Footer>
+      <Footer></Footer> */}
 
 
     </>
