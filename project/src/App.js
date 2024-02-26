@@ -29,7 +29,7 @@ import award from "./data/award.json"
 function App() {
 
   const [totalpro, settotal] = useState(null);
-  
+
   useEffect(() => {
     //get
     const dbstore = async (rtc) => {
@@ -53,7 +53,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(totalpro)
+    console.log(totalpro, totalpro && totalpro['Category'] &&  totalpro['Category'])
 
   },[totalpro])
 
@@ -62,8 +62,8 @@ function App() {
 
   return (
     <>
-      {/* <Header datasrc={totalpro && totalpro['Category'] &&  totalpro['Category']}></Header>
-      <Routes>
+      <Header datasrc={totalpro && totalpro['Category'] &&  totalpro['Category']}></Header>
+      {/* <Routes>
         <Route path="/" element={<section className='mainsec'>
           <Mainswiper datasrc={Mainswipe.mainbanner}></Mainswiper>
           <Sproduct datasrc={totalpro && totalpro}></Sproduct>
@@ -83,8 +83,8 @@ function App() {
         <Route path='/promotion' element={<Promotion />}></Route>
         <Route path='/store/:Category_no' element={<Store datasrc={totalpro && totalpro} catesrc={totalpro && totalpro['Category'] &&  totalpro['Category']} />}></Route>
 
-      </Routes>
-      <Footer></Footer> */}
+      </Routes> */}
+      <Footer></Footer>
 
 
     </>
